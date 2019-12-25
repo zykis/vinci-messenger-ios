@@ -36,3 +36,4 @@ Scripts/sds_codegen/sds-includes/*
 
 # Exclude Pods
 Pods/
+ThirdParty/Carthage/

@@ -9,53 +9,53 @@ def shared_pods
   # OWS Pods
   ###
 
-  pod 'SignalCoreKit', git: 'https://github.com/signalapp/SignalCoreKit.git', testspecs: ["Tests"]
+  pod 'SignalCoreKit', git: 'https://github.com/signalapp/SignalCoreKit.git', testspecs: ["Tests"], :inhibit_warnings => true
   # pod 'SignalCoreKit', path: '../SignalCoreKit', testspecs: ["Tests"]
 
-  pod 'AxolotlKit', git: 'https://github.com/signalapp/SignalProtocolKit.git', branch: 'master', testspecs: ["Tests"]
+  pod 'AxolotlKit', git: 'https://github.com/signalapp/SignalProtocolKit.git', branch: 'master', testspecs: ["Tests"], :inhibit_warnings => true
   # pod 'AxolotlKit', path: '../SignalProtocolKit', testspecs: ["Tests"]
 
-  pod 'HKDFKit', git: 'https://github.com/signalapp/HKDFKit.git', testspecs: ["Tests"]
+  pod 'HKDFKit', git: 'https://github.com/signalapp/HKDFKit.git', testspecs: ["Tests"], :inhibit_warnings => true
   # pod 'HKDFKit', path: '../HKDFKit', testspecs: ["Tests"]
 
-  pod 'Curve25519Kit', git: 'https://github.com/signalapp/Curve25519Kit', testspecs: ["Tests"]
+  pod 'Curve25519Kit', git: 'https://github.com/signalapp/Curve25519Kit', testspecs: ["Tests"], :inhibit_warnings => true
   # pod 'Curve25519Kit', path: '../Curve25519Kit', testspecs: ["Tests"]
 
-  pod 'SignalMetadataKit', git: 'git@github.com:signalapp/SignalMetadataKit', testspecs: ["Tests"]
+  pod 'SignalMetadataKit', git: 'git@github.com:signalapp/SignalMetadataKit', testspecs: ["Tests"], :inhibit_warnings => true
   # pod 'SignalMetadataKit', path: '../SignalMetadataKit', testspecs: ["Tests"]
 
   pod 'blurhash', git: 'https://github.com/signalapp/blurhash', branch: 'addPodspec'
 
-  pod 'SignalServiceKit', path: '.', testspecs: ["Tests"]
+  pod 'SignalServiceKit', path: '.', testspecs: ["Tests"], :inhibit_warnings => true
 
   # Project does not compile with PromiseKit 6.7.1
   # see: https://github.com/mxcl/PromiseKit/issues/990
-  pod 'PromiseKit', "6.5.3"
+  pod 'PromiseKit', "6.5.3", :inhibit_warnings => true
 
   ###
   # forked third party pods
   ###
 
   # pod 'GRDB.swift/SQLCipher', path: '../GRDB.swift'
-  pod 'GRDB.swift/SQLCipher'
+  pod 'GRDB.swift/SQLCipher', :inhibit_warnings => true
 
   # Includes some soon to be released "unencrypted header" changes required for the Share Extension
-  pod 'SQLCipher', ">= 4.0.1"
+  pod 'SQLCipher', ">= 4.0.1", :inhibit_warnings => true
 
   # Forked for performance optimizations that are not likely to be upstreamed as they are specific
   # to our limited use of Mantle
-  pod 'Mantle', git: 'https://github.com/signalapp/Mantle', branch: 'signal-master'
+  pod 'Mantle', git: 'https://github.com/signalapp/Mantle', branch: 'signal-master', :inhibit_warnings => true
   # pod 'Mantle', path: '../Mantle'
 
   # Forked for compatibily with the ShareExtension, changes have an open PR, but have not been merged.
-  pod 'YapDatabase/SQLCipher', :git => 'https://github.com/signalapp/YapDatabase.git', branch: 'signal-release'
+  pod 'YapDatabase/SQLCipher', :git => 'https://github.com/signalapp/YapDatabase.git', branch: 'signal-release', :inhibit_warnings => true
   # pod 'YapDatabase/SQLCipher', path: '../YapDatabase'
 
   # Forked to incorporate our self-built binary artifact.
-  pod 'GRKOpenSSLFramework', git: 'https://github.com/signalapp/GRKOpenSSLFramework', branch: 'mkirk/1.0.2t'
+  pod 'GRKOpenSSLFramework', git: 'https://github.com/signalapp/GRKOpenSSLFramework', branch: 'mkirk/1.0.2t', :inhibit_warnings => true
   #pod 'GRKOpenSSLFramework', path: '../GRKOpenSSLFramework'
 
-  pod 'Starscream', git: 'git@github.com:signalapp/Starscream.git', branch: 'signal-release'
+  pod 'Starscream', git: 'git@github.com:signalapp/Starscream.git', branch: 'signal-release', :inhibit_warnings => true
   # pod 'Starscream', path: '../Starscream'
 
   ###
